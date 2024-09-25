@@ -1,26 +1,42 @@
+<!-- src/App.vue
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="min-h-screen bg-gray-100 flex items-center justify-center">
+    <TodoList />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TodoList from './components/TodoList.vue';
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    TodoList,
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+/* Global styles if necessary */
+</style> -->
+<!-- src/App.vue -->
+<template>
+  <div>
+    <header class="bg-blue-600 text-white p-4">
+      <nav class="container mx-auto flex justify-between">
+        <a href="/" class="text-xl font-bold">Home</a>
+        <a href="/pokemon" class="text-xl font-bold">Pokemon</a>
+      </nav>
+    </header>
+    <router-view></router-view>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'App',
+};
+</script>
+
+<style>
+/* Add any global styles if necessary */
 </style>
